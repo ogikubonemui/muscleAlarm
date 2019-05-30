@@ -6,9 +6,19 @@ import UserNotifications
 class ViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
+    @IBOutlet weak var label: UILabel!
+    var pushupCount = "10"
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+    
     
     @IBAction func didTapBtn(_ sender: Any) {
         setAlerm()

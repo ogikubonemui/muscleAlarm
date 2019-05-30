@@ -10,16 +10,32 @@ class NextViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
+    // 何回センサーが反応したか
+    var cnt = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 画面を読み込むと同時に音楽が再生される
         playMusic()
-        label.text = "画面遷移完了"
+        
+        // 近接センサーをONにする
+        UIDevice.current.isProximityMonitoringEnabled = true
+        // 近接センサーが反応したときにどうするかを定義する
+        NotificationCenter.default.addObserver(self, selector: #selector(proximitySensorStateDidChange), name: UIDevice.proximityStateDidChangeNotification, object: nil)
     }
     
     @IBAction func didTapBtn(_ sender: Any) {
         stopMusic()
         performSegue(withIdentifier: "toTop", sender: nil)
+    }
+    
+    // センサーが反応したときにおこないたい処理
+    @objc func proximitySensorStateDidChange(){
+        // センサーがオンだったら
+        if UIDevice.current.proximityState {
+            cnt = cnt + 1
+            label.text = "\(cnt)"
+        }
     }
     
 }
