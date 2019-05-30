@@ -12,8 +12,6 @@
 		319E9348229FFACA002E0C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 319E9346229FFACA002E0C00 /* Main.storyboard */; };
 		319E934A229FFACB002E0C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 319E9349229FFACB002E0C00 /* Assets.xcassets */; };
 		319E934D229FFACB002E0C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 319E934B229FFACB002E0C00 /* LaunchScreen.storyboard */; };
-		319E9355229FFFB6002E0C00 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319E9354229FFFB6002E0C00 /* NextViewController.swift */; };
-		319E935722A00135002E0C00 /* tsuuchi.caf in Resources */ = {isa = PBXBuildFile; fileRef = 319E935622A00135002E0C00 /* tsuuchi.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +22,6 @@
 		319E9349229FFACB002E0C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		319E934C229FFACB002E0C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		319E934E229FFACB002E0C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		319E9354229FFFB6002E0C00 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		319E935622A00135002E0C00 /* tsuuchi.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tsuuchi.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +54,9 @@
 		319E9341229FFACA002E0C00 /* muscleAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				319E935622A00135002E0C00 /* tsuuchi.caf */,
 				319E9342229FFACA002E0C00 /* AppDelegate.swift */,
 				319E9344229FFACA002E0C00 /* ViewController.swift */,
 				319E9346229FFACA002E0C00 /* Main.storyboard */,
-				319E9354229FFFB6002E0C00 /* NextViewController.swift */,
 				319E9349229FFACB002E0C00 /* Assets.xcassets */,
 				319E934B229FFACB002E0C00 /* LaunchScreen.storyboard */,
 				319E934E229FFACB002E0C00 /* Info.plist */,
@@ -102,11 +96,6 @@
 				TargetAttributes = {
 					319E933E229FFACA002E0C00 = {
 						CreatedOnToolsVersion = 10.2.1;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
 					};
 				};
 			};
@@ -133,7 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				319E935722A00135002E0C00 /* tsuuchi.caf in Resources */,
 				319E934D229FFACB002E0C00 /* LaunchScreen.storyboard in Resources */,
 				319E934A229FFACB002E0C00 /* Assets.xcassets in Resources */,
 				319E9348229FFACA002E0C00 /* Main.storyboard in Resources */,
@@ -148,7 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				319E9345229FFACA002E0C00 /* ViewController.swift in Sources */,
-				319E9355229FFFB6002E0C00 /* NextViewController.swift in Sources */,
 				319E9343229FFACA002E0C00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
