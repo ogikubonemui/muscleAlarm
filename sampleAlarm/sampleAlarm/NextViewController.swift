@@ -7,10 +7,14 @@ class NextViewController: UIViewController {
 
     var audioPlayer: AVAudioPlayer!
     
+    
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 画面を読み込むと同時に音楽が再生される
         playMusic()
+        label.text = "画面遷移完了"
     }
     
     @IBAction func didTapBtn(_ sender: Any) {
