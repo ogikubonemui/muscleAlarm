@@ -8,10 +8,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     
+    // 回数カウント用
     @IBOutlet weak var label: UILabel!
-    var pushupCount = "10"
     
-
+    // 回数カウント用の変数を追加
+    var setCount = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,18 @@ class ViewController: UIViewController {
     
     @IBAction func didTapBtn(_ sender: Any) {
         setAlerm()
+        let userDefault = UserDefaults.standard
+        userDefault.set(setCount, forKey: "setCount")
     }
+    
+    
+    @IBAction func didClickBtn(_ sender: Any) {
+        setCount = setCount + 1
+        label.text = String(setCount)
+    }
+    
+    
+    
     
     
 }
