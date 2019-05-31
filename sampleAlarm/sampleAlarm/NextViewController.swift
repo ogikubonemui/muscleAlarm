@@ -7,13 +7,14 @@ class NextViewController: UIViewController {
 
     var audioPlayer: AVAudioPlayer!
     
-    
+    // 近接センサーを使用した回数がカウントアップで表示されるlabel
     @IBOutlet weak var label: UILabel!
     
     // 何回センサーが反応したか
     var cnt = 0
     
     
+    // viewControllerにて設定した数値が渡されたlabel
     @IBOutlet weak var labelSetCount: UILabel!
     
     
@@ -31,7 +32,6 @@ class NextViewController: UIViewController {
         let userDefault = UserDefaults.standard
         let setCount = userDefault.string(forKey: "setCount")
         labelSetCount.text = setCount
-        
     }
     
     @IBAction func didTapBtn(_ sender: Any) {
@@ -47,7 +47,6 @@ class NextViewController: UIViewController {
             label.text = "\(cnt)"
         }
     }
-    
 }
 
 extension NextViewController: AVAudioPlayerDelegate {

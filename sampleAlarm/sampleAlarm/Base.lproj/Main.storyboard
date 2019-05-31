@@ -34,13 +34,6 @@
                                     <action selector="didTapBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cb-5i-1uO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCf-Hr-Io4">
-                                <rect key="frame" x="29" y="408" width="316" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSO-jg-tnJ">
                                 <rect key="frame" x="156" y="690" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,7 +43,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7y-GK-Ai5">
-                                <rect key="frame" x="43" y="490" width="302" height="164"/>
+                                <rect key="frame" x="36" y="390" width="302" height="164"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
@@ -59,7 +52,6 @@
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="ulb-mF-YNq" id="V2h-Ly-JsQ"/>
-                        <outlet property="label" destination="wCf-Hr-Io4" id="gs4-wU-92b"/>
                         <outlet property="pickerView" destination="k7y-GK-Ai5" id="AaU-E7-Ikd"/>
                     </connections>
                 </viewController>

@@ -13,9 +13,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var pickerView: UIPickerView!
     var setCountNum = [0,5,10,15,20,25,30]
     
-    // 回数カウント用
-    @IBOutlet weak var label: UILabel!
-    
+
     // 回数カウント用の変数を追加
     var setCount = 0
 
@@ -53,12 +51,7 @@ return "\(setCountNum[row])"
         setAlerm()
         let userDefault = UserDefaults.standard
         userDefault.set(setCount, forKey: "setCount")
-    }
-    
-    
-    @IBAction func didClickBtn(_ sender: Any) {
         setCount = setCount + 1
-        label.text = String(setCount)
     }
 }
 
