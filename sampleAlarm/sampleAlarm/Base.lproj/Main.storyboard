@@ -27,7 +27,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfF-BB-knK">
-                                <rect key="frame" x="172" y="627" width="31" height="30"/>
+                                <rect key="frame" x="172" y="748" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登録"/>
                                 <connections>
@@ -42,13 +42,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSO-jg-tnJ">
-                                <rect key="frame" x="156" y="474" width="62" height="30"/>
+                                <rect key="frame" x="156" y="690" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="回数登録"/>
                                 <connections>
                                     <action selector="didClickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWN-wS-sy1"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7y-GK-Ai5">
+                                <rect key="frame" x="43" y="490" width="302" height="164"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -56,6 +60,7 @@
                     <connections>
                         <outlet property="datePicker" destination="ulb-mF-YNq" id="V2h-Ly-JsQ"/>
                         <outlet property="label" destination="wCf-Hr-Io4" id="gs4-wU-92b"/>
+                        <outlet property="pickerView" destination="k7y-GK-Ai5" id="AaU-E7-Ikd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

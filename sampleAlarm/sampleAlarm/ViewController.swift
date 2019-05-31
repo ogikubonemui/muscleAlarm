@@ -1,27 +1,53 @@
-
 import UIKit
-// 通知デリゲート
+// 通知をimport
 import UserNotifications
 
-class ViewController: UIViewController {
+// UIPickerViewを使用するためのDelegateを設定
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
+    // 時間設定
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    var setCountNum = [0,5,10,15,20,25,30]
     
     // 回数カウント用
     @IBOutlet weak var label: UILabel!
     
     // 回数カウント用の変数を追加
     var setCount = 0
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
     }
     
+    // PickerViewの列数を設定する
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    // PickerViewの列数を設定する
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return setCountNum.count
+    }
     
+    // PickerViewに表示する内容を設定する
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        // 変数展開
+return "\(setCountNum[row])"
+
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedFruit = Int(setCountNum[row])
+        print(selectedFruit)
+    }
     
     @IBAction func didTapBtn(_ sender: Any) {
         setAlerm()
@@ -34,11 +60,6 @@ class ViewController: UIViewController {
         setCount = setCount + 1
         label.text = String(setCount)
     }
-    
-    
-    
-    
-    
 }
 
 // 通知関連の処理をこちらに
