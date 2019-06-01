@@ -4,14 +4,16 @@ import UIKit
 import AVFoundation
 
 class NextViewController: UIViewController {
-
+    
     var audioPlayer: AVAudioPlayer!
     
     
     @IBOutlet weak var label: UILabel!
     
-    // 何回センサーが反応したか
+    // 近接センサーが反応した回数
     var proximityCount = 0
+    
+    // userDefaultsに保存されている筋トレの回数
     var pushUpNum = 0
     
     
@@ -32,12 +34,6 @@ class NextViewController: UIViewController {
         let userDefault = UserDefaults.standard
         pushUpNum = userDefault.integer(forKey: "pushUpNum")
         labelSetCount.text = "\(pushUpNum)"
-        
-        // 近接センサーでアラームを止めることを定義
-        if proximityCount >= pushUpNum {
-            stopMusic()
-            performSegue(withIdentifier: "toTop", sender: nil)
-        }
     }
     
     @IBAction func didTapBtn(_ sender: Any) {
@@ -52,8 +48,13 @@ class NextViewController: UIViewController {
             proximityCount = proximityCount + 1
             label.text = "\(proximityCount)"
         }
+        
+        // 近接センサーと設定回数が一致したときの処理
+        if proximityCount == pushUpNum {
+            stopMusic()
+            performSegue(withIdentifier: "toTop", sender: nil)
+        }
     }
-    
 }
 
 extension NextViewController: AVAudioPlayerDelegate {
