@@ -5,20 +5,26 @@ import UserNotifications
 // UIPickerViewを使用するためのDelegateを設定
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
-    // 時間設定
+    // タイマー時間の設定
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    
-    
+    // 腕立て回数の設定
     @IBOutlet weak var pickerView: UIPickerView!
+    
+    
+    @IBOutlet weak var checkLabel: UILabel!
+    
+    // pickerViewに反映させる選択肢用の配列
     var setCountNum = [0,5,10,15,20,25,30]
     
-    // 回数カウント用
+    var pushUpNum = 0
+    
+    // 選択した回数が反映されるlabel（のちほど消す予定）
     @IBOutlet weak var label: UILabel!
     
     // 回数カウント用の変数を追加
-    var setCount = 0
-
+//    var setCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,40 +33,43 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-    // PickerViewの列数を設定する
+    // pickerViewの列数を設定する
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    // PickerViewの列数を設定する
+    // pickerViewの列数を設定する
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return setCountNum.count
     }
     
-    // PickerViewに表示する内容を設定する
+    // pickerViewに表示する内容を設定する
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         // 変数展開
-return "\(setCountNum[row])"
-
+        return "\(setCountNum[row])"
     }
     
+    // pickerViewで選択した値を取り出す
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectedFruit = Int(setCountNum[row])
-        print(selectedFruit)
+        let pushUpNum = Int(setCountNum[row])
+        print(pushUpNum)
+        let userDefault = UserDefaults.standard
+        userDefault.set(pushUpNum, forKey: "pushUpNum")
     }
     
+    // 登録ボタン
     @IBAction func didTapBtn(_ sender: Any) {
         setAlerm()
         let userDefault = UserDefaults.standard
-        userDefault.set(setCount, forKey: "setCount")
-    }
-    
-    
-    @IBAction func didClickBtn(_ sender: Any) {
-        setCount = setCount + 1
-        label.text = String(setCount)
+        pushUpNum = userDefault.integer(forKey: "pushUpNum")
+        label.text = "\(pushUpNum)"
+        checkLabel.text = "登録されました"
     }
 }
+
+
+
+
 
 // 通知関連の処理をこちらに
 extension ViewController {
@@ -83,7 +92,7 @@ extension ViewController {
         
         // 通知リクエストインスタンス作成
         let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
-    
+        
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 }

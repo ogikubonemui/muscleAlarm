@@ -12,6 +12,7 @@ class NextViewController: UIViewController {
     
     // 何回センサーが反応したか
     var cnt = 0
+    var pushUpNum = 0
     
     
     @IBOutlet weak var labelSetCount: UILabel!
@@ -29,9 +30,9 @@ class NextViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(proximitySensorStateDidChange), name: UIDevice.proximityStateDidChangeNotification, object: nil)
         
         let userDefault = UserDefaults.standard
-        let setCount = userDefault.string(forKey: "setCount")
-        labelSetCount.text = setCount
-        
+        pushUpNum = userDefault.integer(forKey: "pushUpNum")
+        labelSetCount.text = "\(pushUpNum)"
+
     }
     
     @IBAction func didTapBtn(_ sender: Any) {
@@ -44,7 +45,7 @@ class NextViewController: UIViewController {
         // センサーがオンだったら
         if UIDevice.current.proximityState {
             cnt = cnt + 1
-            label.text = "\(cnt)"
+            labelSetCount.text = "\(cnt)"
         }
     }
     
