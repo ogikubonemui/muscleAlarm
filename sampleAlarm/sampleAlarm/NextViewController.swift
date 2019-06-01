@@ -33,11 +33,7 @@ class NextViewController: UIViewController {
         pushUpNum = userDefault.integer(forKey: "pushUpNum")
         labelSetCount.text = "\(pushUpNum)"
         
-        // 近接センサーでアラームを止めることを定義
-        if proximityCount >= pushUpNum {
-            stopMusic()
-            performSegue(withIdentifier: "toTop", sender: nil)
-        }
+      
     }
     
     @IBAction func didTapBtn(_ sender: Any) {
@@ -51,6 +47,11 @@ class NextViewController: UIViewController {
         if UIDevice.current.proximityState {
             proximityCount = proximityCount + 1
             label.text = "\(proximityCount)"
+        }
+        // 近接センサーでアラームを止めることを定義
+        if proximityCount >= pushUpNum {
+            stopMusic()
+            performSegue(withIdentifier: "toTop", sender: nil)
         }
     }
     
