@@ -75,13 +75,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvM-O3-5Q6">
-                                <rect key="frame" x="152" y="391" width="46" height="30"/>
-                                <state key="normal" title="止める"/>
-                                <connections>
-                                    <action selector="didTapBtn:" destination="37B-TZ-7TX" eventType="touchUpInside" id="ZPo-3h-FVS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKk-fD-ttN">
                                 <rect key="frame" x="-9" y="199" width="368" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -98,10 +91,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="YvM-O3-5Q6" firstAttribute="centerX" secondItem="w44-LZ-8IR" secondAttribute="centerX" id="SHm-W3-sHa"/>
-                            <constraint firstItem="YvM-O3-5Q6" firstAttribute="centerY" secondItem="w44-LZ-8IR" secondAttribute="centerY" id="lgM-PU-VYq"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8hV-zh-WNm"/>
                     </view>
                     <connections>

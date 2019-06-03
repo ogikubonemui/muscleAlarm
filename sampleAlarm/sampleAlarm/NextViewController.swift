@@ -36,10 +36,10 @@ class NextViewController: UIViewController {
       
     }
     
-    @IBAction func didTapBtn(_ sender: Any) {
-        stopMusic()
-        performSegue(withIdentifier: "toTop", sender: nil)
-    }
+//    @IBAction func didTapBtn(_ sender: Any) {
+//        stopMusic()
+//        performSegue(withIdentifier: "toTop", sender: nil)
+//    }
     
     // センサーが反応したときにおこないたい処理
     @objc func proximitySensorStateDidChange(){

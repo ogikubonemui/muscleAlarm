@@ -23,7 +23,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var label: UILabel!
     
     // 回数カウント用の変数を追加
-//    var setCount = 0
+    //    var setCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +93,28 @@ extension ViewController {
         // 通知リクエストインスタンス作成
         let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
         
+        // 通知リクエストの申し込み
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+        // ここからスヌーズ用の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDellayThree = DateComponents()
+        let calendarDellayThree = Calendar.current
+        notificationTimeDellayThree.hour = calendar.component(.hour, from: datePicker.date)
+        print(datePicker.date)
+        
+        var hogeDate = calendarDellayThree.date(byAdding: .minute, value: 1, to: datePicker.date)
+        print(hogeDate)
+        
+        notificationTimeDellayThree.minute = calendarDellayThree.component(.minute, from: hogeDate!)
+        // 通知トリガーインスタンス作成
+        let triggerDellayThree = UNCalendarNotificationTrigger(dateMatching: notificationTimeDellayThree, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDellayThree = UNNotificationRequest(identifier: "uuid", content: content, trigger: triggerDellayThree)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDellayThree, withCompletionHandler: nil)
+        
     }
 }
