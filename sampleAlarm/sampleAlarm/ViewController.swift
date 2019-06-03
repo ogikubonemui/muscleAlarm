@@ -91,30 +91,33 @@ extension ViewController {
         let trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
         
         // 通知リクエストインスタンス作成
-        let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "uuid1", content: content, trigger: trigger)
         
         // 通知リクエストの申し込み
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        print(notificationTime)
+        
+        
+        
+        
+        
         
         // ここからスヌーズ用の記述
         // 通知時間インスタンス作成
-        var notificationTimeDellayThree = DateComponents()
-        let calendarDellayThree = Calendar.current
-        notificationTimeDellayThree.hour = calendar.component(.hour, from: datePicker.date)
-        print(datePicker.date)
-        
-        var hogeDate = calendarDellayThree.date(byAdding: .minute, value: 1, to: datePicker.date)
-        print(hogeDate)
-        
-        notificationTimeDellayThree.minute = calendarDellayThree.component(.minute, from: hogeDate!)
+        var notificationTimeDelayOne = DateComponents()
+        let calendarDelayOne = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDate = calendarDelayOne.date(byAdding: .minute, value: 1, to: datePicker.date)
+        notificationTimeDelayOne.hour = calendar.component(.hour, from: hogeDate!)
+        notificationTimeDelayOne.minute = calendarDelayOne.component(.minute, from: hogeDate!)
         // 通知トリガーインスタンス作成
-        let triggerDellayThree = UNCalendarNotificationTrigger(dateMatching: notificationTimeDellayThree, repeats: false)
+        let triggerDelayOne = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayOne, repeats: false)
         
         // 通知リクエストインスタンス作成
-        let requestDellayThree = UNNotificationRequest(identifier: "uuid", content: content, trigger: triggerDellayThree)
+        let requestDelayOne = UNNotificationRequest(identifier: "uuid2", content: content, trigger: triggerDelayOne)
         
         // 通知リクエストの申し込み
-        UNUserNotificationCenter.current().add(requestDellayThree, withCompletionHandler: nil)
-        
+        UNUserNotificationCenter.current().add(requestDelayOne, withCompletionHandler: nil)
+        print(notificationTimeDelayOne)
     }
 }
