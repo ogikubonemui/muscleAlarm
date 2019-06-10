@@ -24,12 +24,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // 回数カウント用の変数を追加
     //    var setCount = 0
+    @IBOutlet weak var didTapBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pickerView.delegate = self
         pickerView.dataSource = self
+        didTapBtn.layer.cornerRadius = 10.0
         
     }
     
@@ -56,6 +58,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let userDefault = UserDefaults.standard
         userDefault.set(pushUpNum, forKey: "pushUpNum")
     }
+    
+    
+    
     
     // 登録ボタン
     @IBAction func didTapBtn(_ sender: Any) {

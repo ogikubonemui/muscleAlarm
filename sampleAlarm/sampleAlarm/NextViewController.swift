@@ -4,7 +4,7 @@ import UIKit
 import AVFoundation
 
 class NextViewController: UIViewController {
-
+    
     var audioPlayer: AVAudioPlayer!
     
     
@@ -24,6 +24,8 @@ class NextViewController: UIViewController {
         // 画面を読み込むと同時に音楽が再生される
         playMusic()
         
+        //
+        
         // 近接センサーをONにする
         UIDevice.current.isProximityMonitoringEnabled = true
         // 近接センサーが反応したときにどうするかを定義する
@@ -33,13 +35,13 @@ class NextViewController: UIViewController {
         pushUpNum = userDefault.integer(forKey: "pushUpNum")
         labelSetCount.text = "\(pushUpNum)"
         
-      
+        
     }
     
-//    @IBAction func didTapBtn(_ sender: Any) {
-//        stopMusic()
-//        performSegue(withIdentifier: "toTop", sender: nil)
-//    }
+    //    @IBAction func didTapBtn(_ sender: Any) {
+    //        stopMusic()
+    //        performSegue(withIdentifier: "toTop", sender: nil)
+    //    }
     
     // センサーが反応したときにおこないたい処理
     @objc func proximitySensorStateDidChange(){
@@ -54,7 +56,6 @@ class NextViewController: UIViewController {
             performSegue(withIdentifier: "toTop", sender: nil)
         }
     }
-    
 }
 
 extension NextViewController: AVAudioPlayerDelegate {
