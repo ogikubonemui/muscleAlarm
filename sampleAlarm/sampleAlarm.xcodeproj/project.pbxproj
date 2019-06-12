@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3132FB1122ADE6D400392235 /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132FB1022ADE6D400392235 /* animationViewController.swift */; };
+		319D79BD22B0DF8700F5A111 /* OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D79BC22B0DF8700F5A111 /* OpenViewController.swift */; };
 		31ACCE30229CC19F00D9D066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACCE2F229CC19F00D9D066 /* AppDelegate.swift */; };
 		31ACCE32229CC19F00D9D066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACCE31229CC19F00D9D066 /* ViewController.swift */; };
 		31ACCE35229CC19F00D9D066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ACCE33229CC19F00D9D066 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		3132FB1022ADE6D400392235 /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
+		319D79BC22B0DF8700F5A111 /* OpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenViewController.swift; sourceTree = "<group>"; };
 		31ACCE2C229CC19F00D9D066 /* sampleAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ACCE2F229CC19F00D9D066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31ACCE31229CC19F00D9D066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				31ACCE31229CC19F00D9D066 /* ViewController.swift */,
 				31ACCE45229CCE4100D9D066 /* NextViewController.swift */,
 				31ACCE33229CC19F00D9D066 /* Main.storyboard */,
+				319D79BC22B0DF8700F5A111 /* OpenViewController.swift */,
 				3132FB1022ADE6D400392235 /* animationViewController.swift */,
 				31ACCE36229CC1A000D9D066 /* Assets.xcassets */,
 				31ACCE38229CC1A000D9D066 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319D79BD22B0DF8700F5A111 /* OpenViewController.swift in Sources */,
 				31ACCE32229CC19F00D9D066 /* ViewController.swift in Sources */,
 				31ACCE46229CCE4100D9D066 /* NextViewController.swift in Sources */,
 				31ACCE30229CC19F00D9D066 /* AppDelegate.swift in Sources */,

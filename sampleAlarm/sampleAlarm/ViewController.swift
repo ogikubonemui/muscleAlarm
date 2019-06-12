@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var checkLabel: UILabel!
     
+    @IBOutlet weak var kaiLabel: UILabel!
     // pickerViewに反映させる選択肢用の配列
     var setCountNum = [0,5,10,15,20,25,30]
     
@@ -32,7 +33,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerView.delegate = self
         pickerView.dataSource = self
         didTapBtn.layer.cornerRadius = 10.0
-        
+//        label.text = ""
+//        kaiLabel.text = ""
+        checkLabel.text = ""
     }
     
     // pickerViewの列数を設定する
@@ -59,22 +62,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         userDefault.set(pushUpNum, forKey: "pushUpNum")
     }
     
-    
-    
-    
     // 登録ボタン
     @IBAction func didTapBtn(_ sender: Any) {
         setAlerm()
         let userDefault = UserDefaults.standard
         pushUpNum = userDefault.integer(forKey: "pushUpNum")
-        label.text = "\(pushUpNum)"
+//        label.text = "\(pushUpNum)"
+//        kaiLabel.text = "回"
         checkLabel.text = "登録されました"
     }
 }
-
-
-
-
 
 // 通知関連の処理をこちらに
 extension ViewController {
