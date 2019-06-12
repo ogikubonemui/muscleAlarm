@@ -62,6 +62,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         userDefault.set(pushUpNum, forKey: "pushUpNum")
     }
     
+    
+    
+    @IBAction func didClickInfo(_ sender: Any) {
+        performSegue(withIdentifier: "toInfo", sender: nil)
+    }
+    
     // 登録ボタン
     @IBAction func didTapBtn(_ sender: Any) {
         setAlerm()
