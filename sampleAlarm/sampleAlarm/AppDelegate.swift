@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
   // 通知からアプリが起動したときの処理
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         // Main.storyboardをインスタンス化
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // IDから特定のViewControllerを取得
