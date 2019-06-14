@@ -60,20 +60,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7y-GK-Ai5">
-                                <rect key="frame" x="28" y="348" width="319" height="216"/>
+                                <rect key="frame" x="28" y="462" width="319" height="216"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUR-jL-Vgj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Jhg-l4-dGe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfF-BB-knK">
-                                <rect key="frame" x="40" y="696" width="295" height="29"/>
+                                <rect key="frame" x="40" y="689" width="295" height="29"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                 <state key="normal" title="登録">
@@ -84,52 +74,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アラームが鳴る時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UJ-N4-1rN">
-                                <rect key="frame" x="0.0" y="96" width="375" height="28"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="32"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="fHY-mo-JYI"/>
+                                    <constraint firstAttribute="height" constant="32" id="sxB-Kp-sDB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="腕立てふせをする回数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGr-y6-SLl">
-                                <rect key="frame" x="0.0" y="348" width="375" height="28"/>
+                                <rect key="frame" x="0.0" y="336" width="375" height="32"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="ZIB-fZ-StQ"/>
+                                    <constraint firstAttribute="height" constant="32" id="Z4G-bL-hXh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここに文字が入ります" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsF-sy-xUR">
-                                <rect key="frame" x="0.0" y="749" width="375" height="15"/>
+                                <rect key="frame" x="0.0" y="738" width="375" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                                 <color key="textColor" red="0.94434982540000001" green="0.59770470860000002" blue="0.21552729609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fZ-YG-Iya">
-                                <rect key="frame" x="324" y="46" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="I7v-l1-kMo"/>
-                                    <constraint firstAttribute="height" constant="25" id="Mct-HC-LKt"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="alarm2"/>
-                                <connections>
-                                    <action selector="didClickInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEF-ng-x8F"/>
-                                    <segue destination="thz-4O-IZT" kind="modal" identifier="toInfo" id="9ZR-jS-MSZ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-lS-qFW">
-                                <rect key="frame" x="0.0" y="50" width="375" height="19"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ulb-mF-YNq">
-                                <rect key="frame" x="28" y="132" width="319" height="216"/>
+                                <rect key="frame" x="28" y="96" width="319" height="216"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="580698712.14775205">
                                     <!--2019-05-28 01:11:52 +0000-->
@@ -139,35 +110,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7UJ-N4-1rN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0N3-dq-lxQ"/>
-                            <constraint firstItem="yGr-y6-SLl" firstAttribute="top" secondItem="7UJ-N4-1rN" secondAttribute="bottom" constant="224" id="1GE-nH-H4w"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IfF-BB-knK" secondAttribute="trailing" constant="24" id="6IM-bK-lsx"/>
-                            <constraint firstAttribute="trailing" secondItem="7UJ-N4-1rN" secondAttribute="trailing" id="EgR-mw-vdY"/>
-                            <constraint firstItem="7UJ-N4-1rN" firstAttribute="top" secondItem="LUR-jL-Vgj" secondAttribute="bottom" constant="16" id="FEM-sI-KnU"/>
-                            <constraint firstAttribute="trailing" secondItem="hsF-sy-xUR" secondAttribute="trailing" id="GVB-Xk-DoJ"/>
-                            <constraint firstItem="gjc-lS-qFW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="Ge1-2u-MP4"/>
-                            <constraint firstItem="IfF-BB-knK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="JXE-Zi-rL8"/>
-                            <constraint firstItem="yGr-y6-SLl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nht-7u-9IT"/>
-                            <constraint firstItem="k7y-GK-Ai5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="Nz3-rk-KCs"/>
-                            <constraint firstAttribute="trailing" secondItem="gjc-lS-qFW" secondAttribute="trailing" id="S1M-qF-LvH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ulb-mF-YNq" secondAttribute="trailing" constant="12" id="SHU-cS-YVB"/>
-                            <constraint firstItem="gjc-lS-qFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U3W-ZS-dPW"/>
-                            <constraint firstItem="k7y-GK-Ai5" firstAttribute="top" secondItem="yGr-y6-SLl" secondAttribute="bottom" constant="-28" id="Xah-E7-K02"/>
-                            <constraint firstItem="hsF-sy-xUR" firstAttribute="top" secondItem="IfF-BB-knK" secondAttribute="bottom" constant="24" id="ZI0-Fk-VeV"/>
-                            <constraint firstAttribute="trailing" secondItem="LUR-jL-Vgj" secondAttribute="trailing" id="acu-0R-On8"/>
-                            <constraint firstItem="hsF-sy-xUR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="crC-Rf-QOR"/>
-                            <constraint firstAttribute="trailing" secondItem="hsF-sy-xUR" secondAttribute="trailing" id="fDy-zq-aHz"/>
-                            <constraint firstAttribute="bottom" secondItem="hsF-sy-xUR" secondAttribute="bottom" constant="48" id="fu9-D5-F7T"/>
-                            <constraint firstItem="LUR-jL-Vgj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gNr-Cc-9Nw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="k7y-GK-Ai5" secondAttribute="trailing" constant="12" id="hb8-IL-Bwa"/>
-                            <constraint firstItem="ulb-mF-YNq" firstAttribute="top" secondItem="7UJ-N4-1rN" secondAttribute="bottom" constant="8" id="kKk-1I-Yod"/>
-                            <constraint firstItem="LUR-jL-Vgj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lnf-AT-eqZ"/>
-                            <constraint firstAttribute="trailing" secondItem="7UJ-N4-1rN" secondAttribute="trailing" id="nYO-Td-FoL"/>
-                            <constraint firstItem="ulb-mF-YNq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="oYb-2D-Sta"/>
-                            <constraint firstItem="6fZ-YG-Iya" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="46" id="v5N-qe-ov8"/>
-                            <constraint firstAttribute="trailing" secondItem="6fZ-YG-Iya" secondAttribute="trailing" constant="26" id="wgM-4P-uqn"/>
-                            <constraint firstAttribute="trailing" secondItem="yGr-y6-SLl" secondAttribute="trailing" id="xY3-lx-I3t"/>
-                            <constraint firstItem="7UJ-N4-1rN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zMj-Lk-vKl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k7y-GK-Ai5" secondAttribute="trailing" constant="12" id="09j-W2-gNK"/>
+                            <constraint firstAttribute="trailing" secondItem="7UJ-N4-1rN" secondAttribute="trailing" id="2ZX-IZ-eAS"/>
+                            <constraint firstItem="yGr-y6-SLl" firstAttribute="top" secondItem="ulb-mF-YNq" secondAttribute="bottom" constant="24" id="4Aa-9C-0r9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ulb-mF-YNq" secondAttribute="trailing" constant="12" id="7cv-b2-SKd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IfF-BB-knK" secondAttribute="trailing" constant="24" id="9Mp-Mq-UlP"/>
+                            <constraint firstItem="lxU-ZX-eJA" firstAttribute="top" secondItem="hsF-sy-xUR" secondAttribute="bottom" constant="25" id="Luf-ea-vRY"/>
+                            <constraint firstAttribute="trailing" secondItem="yGr-y6-SLl" secondAttribute="trailing" id="M6r-tZ-Gyz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="k7y-GK-Ai5" secondAttribute="bottom" constant="100" id="Nqe-KW-i9i"/>
+                            <constraint firstItem="hsF-sy-xUR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TVG-DY-WTu"/>
+                            <constraint firstItem="ulb-mF-YNq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="UiI-Up-g4H"/>
+                            <constraint firstItem="k7y-GK-Ai5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="Uwb-Qm-DOa"/>
+                            <constraint firstItem="ulb-mF-YNq" firstAttribute="top" secondItem="7UJ-N4-1rN" secondAttribute="bottom" constant="8" id="Znb-oa-Rgy"/>
+                            <constraint firstItem="7UJ-N4-1rN" firstAttribute="top" secondItem="VNm-QH-cjT" secondAttribute="bottom" constant="12" id="cRo-wA-u1S"/>
+                            <constraint firstItem="yGr-y6-SLl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iX8-gC-TTw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="IfF-BB-knK" secondAttribute="bottom" constant="60" id="iqP-53-6z4"/>
+                            <constraint firstItem="7UJ-N4-1rN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mxj-cE-Dsw"/>
+                            <constraint firstItem="IfF-BB-knK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="oNk-od-LHl"/>
+                            <constraint firstAttribute="trailing" secondItem="hsF-sy-xUR" secondAttribute="trailing" id="wi6-pY-JEO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -354,6 +314,6 @@
         <image name="udetate2" width="992" height="680"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9nz-HT-0GO"/>
+        <segue reference="p5K-7s-J14"/>
     </inferredMetricsTieBreakers>
 </document>
