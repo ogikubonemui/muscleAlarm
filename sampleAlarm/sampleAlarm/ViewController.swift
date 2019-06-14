@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var kaiLabel: UILabel!
     // pickerViewに反映させる選択肢用の配列
-    var setCountNum = [0,5,10,15,20,25,30]
+    var setCountNum = [10,30]
     
     var pushUpNum = 0
     
