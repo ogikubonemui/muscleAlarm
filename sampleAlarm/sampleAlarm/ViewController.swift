@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var kaiLabel: UILabel!
     // pickerViewに反映させる選択肢用の配列
-    var setCountNum = [10,30]
+    var setCountNum = [0,10,50]
     
     var pushUpNum = 0
     
@@ -61,7 +61,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let userDefault = UserDefaults.standard
         userDefault.set(pushUpNum, forKey: "pushUpNum")
     }
-    
     
     
     @IBAction func didClickInfo(_ sender: Any) {
