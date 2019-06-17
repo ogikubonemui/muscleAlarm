@@ -14,8 +14,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var checkLabel: UILabel!
     
+    @IBOutlet weak var kaiLabel: UILabel!
     // pickerViewに反映させる選択肢用の配列
-    var setCountNum = [0,5,10,15,20,25,30]
+    var setCountNum = [0,10,50]
     
     var pushUpNum = 0
     
@@ -23,14 +24,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var label: UILabel!
     
     // 回数カウント用の変数を追加
-//    var setCount = 0
+    //    var setCount = 0
+    @IBOutlet weak var didTapBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pickerView.delegate = self
         pickerView.dataSource = self
-        
+        didTapBtn.layer.cornerRadius = 10.0
+//        label.text = ""
+//        kaiLabel.text = ""
+        checkLabel.text = ""
     }
     
     // pickerViewの列数を設定する
@@ -57,19 +62,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         userDefault.set(pushUpNum, forKey: "pushUpNum")
     }
     
+    
+    @IBAction func didClickInfo(_ sender: Any) {
+        performSegue(withIdentifier: "toInfo", sender: nil)
+    }
+    
     // 登録ボタン
     @IBAction func didTapBtn(_ sender: Any) {
         setAlerm()
         let userDefault = UserDefaults.standard
         pushUpNum = userDefault.integer(forKey: "pushUpNum")
-        label.text = "\(pushUpNum)"
+//        label.text = "\(pushUpNum)"
+//        kaiLabel.text = "回"
         checkLabel.text = "登録されました"
     }
 }
-
-
-
-
 
 // 通知関連の処理をこちらに
 extension ViewController {
@@ -91,8 +98,33 @@ extension ViewController {
         let trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
         
         // 通知リクエストインスタンス作成
-        let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "uuid1", content: content, trigger: trigger)
         
+        // 通知リクエストの申し込み
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        print(notificationTime)
+        
+        
+        
+        
+        
+        
+        // ここからスヌーズ用の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelayOne = DateComponents()
+        let calendarDelayOne = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDate = calendarDelayOne.date(byAdding: .minute, value: 1, to: datePicker.date)
+        notificationTimeDelayOne.hour = calendar.component(.hour, from: hogeDate!)
+        notificationTimeDelayOne.minute = calendarDelayOne.component(.minute, from: hogeDate!)
+        // 通知トリガーインスタンス作成
+        let triggerDelayOne = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayOne, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelayOne = UNNotificationRequest(identifier: "uuid2", content: content, trigger: triggerDelayOne)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelayOne, withCompletionHandler: nil)
+        print(notificationTimeDelayOne)
     }
 }

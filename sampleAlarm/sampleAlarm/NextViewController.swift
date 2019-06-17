@@ -10,10 +10,8 @@ class NextViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
-    // 近接センサーが反応した回数
+    // 何回センサーが反応したか
     var proximityCount = 0
-    
-    // userDefaultsに保存されている筋トレの回数
     var pushUpNum = 0
     
     
@@ -26,6 +24,8 @@ class NextViewController: UIViewController {
         // 画面を読み込むと同時に音楽が再生される
         playMusic()
         
+        //
+        
         // 近接センサーをONにする
         UIDevice.current.isProximityMonitoringEnabled = true
         // 近接センサーが反応したときにどうするかを定義する
@@ -34,12 +34,14 @@ class NextViewController: UIViewController {
         let userDefault = UserDefaults.standard
         pushUpNum = userDefault.integer(forKey: "pushUpNum")
         labelSetCount.text = "\(pushUpNum)"
+        
+        
     }
     
-    @IBAction func didTapBtn(_ sender: Any) {
-        stopMusic()
-        performSegue(withIdentifier: "toTop", sender: nil)
-    }
+    //    @IBAction func didTapBtn(_ sender: Any) {
+    //        stopMusic()
+    //        performSegue(withIdentifier: "toTop", sender: nil)
+    //    }
     
     // センサーが反応したときにおこないたい処理
     @objc func proximitySensorStateDidChange(){
@@ -48,9 +50,8 @@ class NextViewController: UIViewController {
             proximityCount = proximityCount + 1
             label.text = "\(proximityCount)"
         }
-        
-        // 近接センサーと設定回数が一致したときの処理
-        if proximityCount == pushUpNum {
+        // 近接センサーでアラームを止めることを定義
+        if proximityCount >= pushUpNum {
             stopMusic()
             performSegue(withIdentifier: "toTop", sender: nil)
         }

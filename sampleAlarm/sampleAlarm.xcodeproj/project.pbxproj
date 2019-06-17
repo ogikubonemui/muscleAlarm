@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3132FB1122ADE6D400392235 /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132FB1022ADE6D400392235 /* animationViewController.swift */; };
+		319D79BD22B0DF8700F5A111 /* OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D79BC22B0DF8700F5A111 /* OpenViewController.swift */; };
 		31ACCE30229CC19F00D9D066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACCE2F229CC19F00D9D066 /* AppDelegate.swift */; };
 		31ACCE32229CC19F00D9D066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACCE31229CC19F00D9D066 /* ViewController.swift */; };
 		31ACCE35229CC19F00D9D066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ACCE33229CC19F00D9D066 /* Main.storyboard */; };
@@ -15,9 +17,12 @@
 		31ACCE43229CC76D00D9D066 /* momoclo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 31ACCE41229CC72400D9D066 /* momoclo.caf */; };
 		31ACCE44229CC76D00D9D066 /* tsuuchi.caf in Resources */ = {isa = PBXBuildFile; fileRef = 31ACCE42229CC72400D9D066 /* tsuuchi.caf */; };
 		31ACCE46229CCE4100D9D066 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACCE45229CCE4100D9D066 /* NextViewController.swift */; };
+		31C9916022B1046A00A8E121 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9915F22B1046A00A8E121 /* infoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3132FB1022ADE6D400392235 /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
+		319D79BC22B0DF8700F5A111 /* OpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenViewController.swift; sourceTree = "<group>"; };
 		31ACCE2C229CC19F00D9D066 /* sampleAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ACCE2F229CC19F00D9D066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31ACCE31229CC19F00D9D066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		31ACCE41229CC72400D9D066 /* momoclo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = momoclo.caf; sourceTree = "<group>"; };
 		31ACCE42229CC72400D9D066 /* tsuuchi.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tsuuchi.caf; sourceTree = "<group>"; };
 		31ACCE45229CCE4100D9D066 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		31C9915F22B1046A00A8E121 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				31ACCE31229CC19F00D9D066 /* ViewController.swift */,
 				31ACCE45229CCE4100D9D066 /* NextViewController.swift */,
 				31ACCE33229CC19F00D9D066 /* Main.storyboard */,
+				31C9915F22B1046A00A8E121 /* infoViewController.swift */,
+				319D79BC22B0DF8700F5A111 /* OpenViewController.swift */,
+				3132FB1022ADE6D400392235 /* animationViewController.swift */,
 				31ACCE36229CC1A000D9D066 /* Assets.xcassets */,
 				31ACCE38229CC1A000D9D066 /* LaunchScreen.storyboard */,
 				31ACCE41229CC72400D9D066 /* momoclo.caf */,
@@ -151,9 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C9916022B1046A00A8E121 /* infoViewController.swift in Sources */,
+				319D79BD22B0DF8700F5A111 /* OpenViewController.swift in Sources */,
 				31ACCE32229CC19F00D9D066 /* ViewController.swift in Sources */,
 				31ACCE46229CCE4100D9D066 /* NextViewController.swift in Sources */,
 				31ACCE30229CC19F00D9D066 /* AppDelegate.swift in Sources */,
+				3132FB1122ADE6D400392235 /* animationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yshita.sampleAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -327,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yshita.sampleAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
