@@ -85,8 +85,8 @@ extension ViewController {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         // 通知内容の作成
         let content = UNMutableNotificationContent()
-        content.title = "朝です"
-        content.body = "筋トレしましょう"
+        content.title = "時間になりました"
+        content.body = "筋トレをしましょう"
         content.sound = UNNotificationSound.init(named: UNNotificationSoundName(rawValue: "tsuuchi.caf"))
         
         // 通知時間インスタンス作成

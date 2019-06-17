@@ -108,7 +108,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUj-En-18p">
-                                <rect key="frame" x="331" y="51" width="32" height="33"/>
+                                <rect key="frame" x="336" y="56" width="27" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mUj-En-18p" secondAttribute="height" multiplier="32:33" id="HDI-M5-d3G"/>
                                 </constraints>
@@ -122,7 +122,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="k7y-GK-Ai5" secondAttribute="trailing" constant="12" id="09j-W2-gNK"/>
-                            <constraint firstItem="mUj-En-18p" firstAttribute="top" secondItem="VNm-QH-cjT" secondAttribute="bottom" constant="7" id="1hZ-Cn-xi9"/>
+                            <constraint firstItem="mUj-En-18p" firstAttribute="top" secondItem="VNm-QH-cjT" secondAttribute="bottom" constant="12" id="1hZ-Cn-xi9"/>
                             <constraint firstAttribute="trailing" secondItem="7UJ-N4-1rN" secondAttribute="trailing" id="2ZX-IZ-eAS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ulb-mF-YNq" secondAttribute="trailing" constant="12" id="7cv-b2-SKd"/>
                             <constraint firstItem="7UJ-N4-1rN" firstAttribute="top" secondItem="mUj-En-18p" secondAttribute="bottom" constant="8" id="7el-7s-f9L"/>
