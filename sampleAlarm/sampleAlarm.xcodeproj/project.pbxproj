@@ -34,6 +34,7 @@
 		31ACCE42229CC72400D9D066 /* tsuuchi.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tsuuchi.caf; sourceTree = "<group>"; };
 		31ACCE45229CCE4100D9D066 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		31C9915F22B1046A00A8E121 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
+		31FF07F922B7EDDC00C423C1 /* energy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = energy.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 				31ACCE38229CC1A000D9D066 /* LaunchScreen.storyboard */,
 				31ACCE41229CC72400D9D066 /* momoclo.caf */,
 				31ACCE42229CC72400D9D066 /* tsuuchi.caf */,
+				31FF07F922B7EDDC00C423C1 /* energy.caf */,
 				31ACCE3B229CC1A000D9D066 /* Info.plist */,
 			);
 			path = sampleAlarm;

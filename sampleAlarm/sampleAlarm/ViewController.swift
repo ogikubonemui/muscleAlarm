@@ -126,5 +126,150 @@ extension ViewController {
         // 通知リクエストの申し込み
         UNUserNotificationCenter.current().add(requestDelayOne, withCompletionHandler: nil)
         print(notificationTimeDelayOne)
+        
+        // ここからスヌーズ用（2分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelayTwo = DateComponents()
+        let calendarDelayTwo = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateTwo = calendarDelayTwo.date(byAdding: .minute, value: 2, to: datePicker.date)
+        notificationTimeDelayTwo.hour = calendar.component(.hour, from: hogeDateTwo!)
+        notificationTimeDelayTwo.minute = calendarDelayTwo.component(.minute, from: hogeDateTwo!)
+        // 通知トリガーインスタンス作成
+        let triggerDelayTwo = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayTwo, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelayTwo = UNNotificationRequest(identifier: "uuid3", content: content, trigger: triggerDelayTwo)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelayTwo, withCompletionHandler: nil)
+        print(notificationTimeDelayTwo)
+        
+    
+        // ここからスヌーズ用（3分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelayThree = DateComponents()
+        let calendarDelayThree = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateThree = calendarDelayThree.date(byAdding: .minute, value: 3, to: datePicker.date)
+        notificationTimeDelayThree.hour = calendar.component(.hour, from: hogeDateThree!)
+        notificationTimeDelayThree.minute = calendarDelayThree.component(.minute, from: hogeDateThree!)
+        // 通知トリガーインスタンス作成
+        let triggerDelayThree = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayThree, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelayThree = UNNotificationRequest(identifier: "uuid4", content: content, trigger: triggerDelayThree)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelayThree, withCompletionHandler: nil)
+        print(notificationTimeDelayThree)
+        
+        // ここからスヌーズ用（4分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelayFour = DateComponents()
+        let calendarDelayFour = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateFour = calendarDelayFour.date(byAdding: .minute, value: 4, to: datePicker.date)
+        notificationTimeDelayFour.hour = calendar.component(.hour, from: hogeDateFour!)
+        notificationTimeDelayFour.minute = calendarDelayFour.component(.minute, from: hogeDateFour!)
+        // 通知トリガーインスタンス作成
+        let triggerDelayFour = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayFour, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelayFour = UNNotificationRequest(identifier: "uuid5", content: content, trigger: triggerDelayFour)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelayFour, withCompletionHandler: nil)
+        print(notificationTimeDelayFour)
+        
+        // ここからスヌーズ用（5分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelayFive = DateComponents()
+        let calendarDelayFive = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateFive = calendarDelayFive.date(byAdding: .minute, value: 5, to: datePicker.date)
+        notificationTimeDelayFive.hour = calendar.component(.hour, from: hogeDateFive!)
+        notificationTimeDelayFive.minute = calendarDelayFive.component(.minute, from: hogeDateFive!)
+        // 通知トリガーインスタンス作成
+        let triggerDelayFive = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayFive, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelayFive = UNNotificationRequest(identifier: "uuid6", content: content, trigger: triggerDelayFive)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelayFive, withCompletionHandler: nil)
+        print(notificationTimeDelayFive)
+        
+        // ここからスヌーズ用（6分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelaySix = DateComponents()
+        let calendarDelaySix = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateSix = calendarDelaySix.date(byAdding: .minute, value: 6, to: datePicker.date)
+        notificationTimeDelaySix.hour = calendar.component(.hour, from: hogeDateSix!)
+        notificationTimeDelaySix.minute = calendarDelaySix.component(.minute, from: hogeDateSix!)
+        // 通知トリガーインスタンス作成
+        let triggerDelaySix = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelaySix, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelaySix = UNNotificationRequest(identifier: "uuid7", content: content, trigger: triggerDelaySix)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelaySix, withCompletionHandler: nil)
+        print(notificationTimeDelaySix)
+        
+        // ここからスヌーズ用（7分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelaySeven = DateComponents()
+        let calendarDelaySeven = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateSeven = calendarDelaySeven.date(byAdding: .minute, value: 7, to: datePicker.date)
+        notificationTimeDelaySeven.hour = calendar.component(.hour, from: hogeDateSeven!)
+        notificationTimeDelaySeven.minute = calendarDelaySeven.component(.minute, from: hogeDateSeven!)
+        // 通知トリガーインスタンス作成
+        let triggerDelaySeven = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelaySeven, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelaySeven = UNNotificationRequest(identifier: "uuid8", content: content, trigger: triggerDelaySeven)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelaySeven, withCompletionHandler: nil)
+        print(notificationTimeDelaySeven)
+        
+        // ここからスヌーズ用（8分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelayEight = DateComponents()
+        let calendarDelayEight = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateEight = calendarDelayEight.date(byAdding: .minute, value: 8, to: datePicker.date)
+        notificationTimeDelayEight.hour = calendar.component(.hour, from: hogeDateEight!)
+        notificationTimeDelayEight.minute = calendarDelayEight.component(.minute, from: hogeDateEight!)
+        // 通知トリガーインスタンス作成
+        let triggerDelayEight = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayEight, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelayEight = UNNotificationRequest(identifier: "uuid9", content: content, trigger: triggerDelayEight)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelayEight, withCompletionHandler: nil)
+        print(notificationTimeDelayEight)
+        
+        // ここからスヌーズ用（9分後）の記述
+        // 通知時間インスタンス作成
+        var notificationTimeDelayNine = DateComponents()
+        let calendarDelayNine = Calendar.current
+        // hogeDateに遅らせた日付を代入
+        let hogeDateNine = calendarDelayNine.date(byAdding: .minute, value: 9, to: datePicker.date)
+        notificationTimeDelayNine.hour = calendar.component(.hour, from: hogeDateNine!)
+        notificationTimeDelayNine.minute = calendarDelayNine.component(.minute, from: hogeDateNine!)
+        // 通知トリガーインスタンス作成
+        let triggerDelayNine = UNCalendarNotificationTrigger(dateMatching: notificationTimeDelayNine, repeats: false)
+        
+        // 通知リクエストインスタンス作成
+        let requestDelayNine = UNNotificationRequest(identifier: "uuid10", content: content, trigger: triggerDelayNine)
+        
+        // 通知リクエストの申し込み
+        UNUserNotificationCenter.current().add(requestDelayNine, withCompletionHandler: nil)
+        print(notificationTimeDelayNine)
     }
 }

@@ -60,7 +60,7 @@ class NextViewController: UIViewController {
 
 extension NextViewController: AVAudioPlayerDelegate {
     func playMusic() {
-        if let music = NSDataAsset(name: "momoclo") {
+        if let music = NSDataAsset(name: "energy") {
             audioPlayer = try? AVAudioPlayer(data: music.data)
             audioPlayer.delegate = self
             audioPlayer.play()
