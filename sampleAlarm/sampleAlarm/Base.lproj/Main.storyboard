@@ -108,7 +108,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUj-En-18p">
-                                <rect key="frame" x="328" y="56" width="23" height="24"/>
+                                <rect key="frame" x="327" y="51" width="32" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="alarm_oposit"/>
                                 <connections>
@@ -275,11 +275,9 @@
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6V-LZ-s6e">
-                                <rect key="frame" x="66" y="464" width="243" height="164"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="g6V-LZ-s6e" secondAttribute="height" multiplier="243:164" id="JYS-YQ-LXK"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6V-LZ-s6e">
+                                <rect key="frame" x="71" y="487" width="233" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="udetate2"/>
                             </button>
                         </subviews>
@@ -287,7 +285,6 @@
                         <constraints>
                             <constraint firstItem="KKk-fD-ttN" firstAttribute="top" secondItem="kVw-An-pbu" secondAttribute="bottom" constant="8" id="0T4-BX-whF"/>
                             <constraint firstItem="sYf-YO-HKk" firstAttribute="leading" secondItem="w44-LZ-8IR" secondAttribute="leading" id="2Jb-oa-Plk"/>
-                            <constraint firstAttribute="trailing" secondItem="g6V-LZ-s6e" secondAttribute="trailing" constant="66" id="2X7-V2-kJb"/>
                             <constraint firstAttribute="trailing" secondItem="YsK-a3-9Kz" secondAttribute="trailing" id="AP4-L0-gYv"/>
                             <constraint firstAttribute="trailing" secondItem="ZD0-Tx-ng1" secondAttribute="trailing" id="EwD-16-xBY"/>
                             <constraint firstItem="fUb-ER-SGK" firstAttribute="top" secondItem="ZD0-Tx-ng1" secondAttribute="bottom" constant="54" id="F1z-Tv-bEJ"/>
@@ -296,13 +293,11 @@
                             <constraint firstItem="YsK-a3-9Kz" firstAttribute="leading" secondItem="w44-LZ-8IR" secondAttribute="leading" id="TnO-du-I95"/>
                             <constraint firstItem="YsK-a3-9Kz" firstAttribute="top" secondItem="sYf-YO-HKk" secondAttribute="bottom" constant="8" id="Toj-WP-U8I"/>
                             <constraint firstItem="kVw-An-pbu" firstAttribute="top" secondItem="6UM-Cs-VIF" secondAttribute="bottom" constant="124" id="b9Y-uW-J2z"/>
-                            <constraint firstAttribute="bottom" secondItem="g6V-LZ-s6e" secondAttribute="bottom" constant="184" id="d7K-Ve-D7v"/>
                             <constraint firstAttribute="trailing" secondItem="kVw-An-pbu" secondAttribute="trailing" id="lYI-wn-1zj"/>
                             <constraint firstItem="kVw-An-pbu" firstAttribute="leading" secondItem="w44-LZ-8IR" secondAttribute="leading" id="nE9-eD-Dnq"/>
                             <constraint firstAttribute="trailing" secondItem="KKk-fD-ttN" secondAttribute="trailing" id="omJ-n3-WAE"/>
                             <constraint firstItem="sYf-YO-HKk" firstAttribute="top" secondItem="KKk-fD-ttN" secondAttribute="bottom" constant="82" id="pSV-5V-7Fs"/>
                             <constraint firstAttribute="trailing" secondItem="sYf-YO-HKk" secondAttribute="trailing" id="tyx-Ul-1NV"/>
-                            <constraint firstItem="g6V-LZ-s6e" firstAttribute="leading" secondItem="w44-LZ-8IR" secondAttribute="leading" constant="66" id="whd-JB-T1y"/>
                         </constraints>
                     </view>
                     <connections>
