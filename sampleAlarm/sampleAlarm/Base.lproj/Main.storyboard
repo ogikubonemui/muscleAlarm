@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarm2" translatesAutoresizingMaskIntoConstraints="NO" id="t0T-EH-1kt">
-                                <rect key="frame" x="87.666666666666686" y="306" width="200" height="200"/>
+                                <rect key="frame" x="87.666666666666686" y="306" width="200.00000000000023" height="200.00000000000023"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Zv4-L9-bm3"/>
                                     <constraint firstAttribute="height" constant="200" id="scw-J6-QRh"/>
@@ -317,6 +317,6 @@
         <image name="udetate2" width="992" height="680"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9nz-HT-0GO"/>
+        <segue reference="p5K-7s-J14"/>
     </inferredMetricsTieBreakers>
 </document>
